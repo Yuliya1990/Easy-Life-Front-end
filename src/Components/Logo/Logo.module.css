@@ -1,0 +1,33 @@
+.Logo {
+  position: relative;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.WhiteLine1 {
+  background-color: white;
+  height: 22px;
+  width: 115px;
+}
+
+.WhiteLine2 {
+  background-color: white;
+  margin-top: 10px;
+  height: 22px;
+  width: 85px;
+}
+
+.text {
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -15px;
+  margin-left: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
