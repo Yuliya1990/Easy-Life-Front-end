@@ -1,7 +1,7 @@
 .row {
   display: flex;
   align-items: center;
-  height: 800px;
+  margin-bottom: 70px;
 }
 
 .col {
@@ -9,13 +9,23 @@
   justify-content: center;
 }
 
-.text {
+.textContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 550px;
+  text-align: start;
 }
 
 .textEmphasis {
   color: #ffcc00;
+}
+
+.list {
+  list-style-type: circle;
+  font-size: 20px;
+}
+.list li {
+  margin-top: 10px;
 }

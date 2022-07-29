@@ -6,14 +6,25 @@ import Col from 'react-bootstrap/Col';
 
 function FirstContent() {
   return (
-    <Container fluid style={{ marginTop: '100px' }}>
+    <Container fluid style={{ marginTop: '130px' }}>
       <Row className={styles.row}>
         <Col xs={12} lg={7} sm={6} className={styles.col}>
-          <div className={styles.text}>
+          <div className={styles.textContainer}>
             <h1>
               Ready to <span className={styles.textEmphasis}>free up</span> your time?
             </h1>
-            <p>Some text</p>
+            <ul className={styles.list}>
+              <li>
+                AI-Based tool that solves your routine household tasks with premium care in 2
+                clicks.
+              </li>
+              <li>No more exhausting daily routine!!!</li>
+              <li>Outsource to professional all household duties!</li>
+              <li>
+                Spend time with pleasure and make{' '}
+                <mark style={{ backgroundColor: '#ffcc00' }}>your life easier!</mark>
+              </li>
+            </ul>
           </div>
         </Col>
         <Col xs={12} lg={4} sm={6} className={styles.col}>
