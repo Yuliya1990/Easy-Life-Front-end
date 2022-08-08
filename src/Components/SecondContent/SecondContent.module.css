@@ -1,0 +1,26 @@
+.marker {
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.images {
+  height: 250px;
+  border: 5px solid;
+  border-color: white;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.images:hover {
+  transform: scale(1.05);
+}
