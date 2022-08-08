@@ -1,6 +1,6 @@
 .Logo {
   position: relative;
-  height: 50px;
+  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,6 +9,7 @@
 
 .WhiteLine1 {
   background-color: white;
+  margin-top: 8px;
   height: 22px;
   width: 115px;
 }
@@ -29,5 +30,5 @@
   margin-left: 3px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 40px;
 }
