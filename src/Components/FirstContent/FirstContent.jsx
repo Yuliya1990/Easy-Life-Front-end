@@ -3,6 +3,9 @@ import styles from './FirstContent.module.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Madrid from '../img/Madrid.jpg';
+import Barcelona from '../img/Barcelona.jpg';
+import Valencia from '../img/Valencia.png';
 
 function FirstContent() {
   return (
@@ -36,8 +39,29 @@ function FirstContent() {
           </div>
         </Col>
       </Row>
-      <Row className={styles.row} style={{ background: '#fffae6' }}>
-        <p style={{ height: '500px' }}></p>
+      <Row className={styles.row}>
+        <Col xs={12} className={styles.col}>
+          <div className={styles.location}>
+            <h1 style={{ lineHeight: 1, fontSize: 50 }}>Our locations</h1>
+            <div
+              className={styles.marker}
+              style={{ height: '30px', width: '179px', marginLeft: '-7px' }}></div>
+          </div>
+        </Col>
+      </Row>
+      <Row className="justify-content-md-center">
+        <Col xs={12} sm={3} className={styles.col}>
+          <img src={Madrid} className={styles.images} />
+          <h4 style={{ lineHeight: 2 }}>Madrid</h4>
+        </Col>
+        <Col xs={12} sm={3} className={styles.col}>
+          <img src={Barcelona} className={styles.images} />
+          <h4 style={{ lineHeight: 2 }}>Barcelona</h4>
+        </Col>
+        <Col xs={12} sm={3} className={styles.col}>
+          <img src={Valencia} className={styles.images} />
+          <h4 style={{ lineHeight: 2 }}>Valencia</h4>
+        </Col>
       </Row>
     </Container>
   );
