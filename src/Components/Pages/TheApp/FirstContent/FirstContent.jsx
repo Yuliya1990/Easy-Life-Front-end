@@ -3,6 +3,8 @@ import styles from './FirstContent.module.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import App from '../../../img/App.png';
+import Button from 'react-bootstrap/Button';
 
 function FirstContent() {
   return (
@@ -25,14 +27,14 @@ function FirstContent() {
                 <mark style={{ backgroundColor: '#ffcc00' }}>your life easier!</mark>
               </li>
             </ul>
+            <button className={styles.btn}>
+              <b>Get started!</b>
+            </button>
           </div>
         </Col>
         <Col xs={12} lg={4} sm={6} className={styles.col}>
           <div>
-            <img
-              src="https://img.moyo.ua/img/gallery/4978/93/1234982_middle.jpg?1629268509"
-              style={{ height: '650px' }}
-            />
+            <img src={App} style={{ height: '650px' }} />
           </div>
         </Col>
       </Row>

@@ -3,9 +3,9 @@ import styles from './SecondContent.module.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Madrid from '../img/Madrid.jpg';
-import Barcelona from '../img/Barcelona.png';
-import Valencia from '../img/Valencia.png';
+import Madrid from '../../../img/Madrid.jpg';
+import Barcelona from '../../../img/Barcelona.png';
+import Valencia from '../../../img/Valencia.png';
 
 function SecondContent() {
   return (
@@ -16,11 +16,11 @@ function SecondContent() {
             <h1 style={{ lineHeight: 1, fontSize: 50, zIndex: 2 }}>Our locations</h1>
             <div
               className={styles.marker}
-              style={{ height: '30px', width: '220px', marginLeft: '-7px' }}></div>
+              style={{ height: '30px', width: '220px', marginLeft: '-33px' }}></div>
           </div>
         </Col>
       </Row>
-      <Row className="justify-content-md-center" style={{ paddingBottom: '50px' }}>
+      <Row className="justify-content-md-center" style={{ paddingBottom: '70px' }}>
         <Col
           xs={12}
           md={6}

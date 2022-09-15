@@ -1,0 +1,45 @@
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+}
+
+.marker {
+  margin-top: 25px;
+  margin-left: -20px;
+  background-color: #ffcc00;
+  position: absolute;
+  height: 30px;
+  width: 307px;
+  z-index: -1;
+}
+
+.list {
+  margin-left: -10px;
+  list-style-type: circle;
+  font-size: 20px;
+  text-align: center;
+}
+.list li {
+  margin-top: 10px;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.img {
+  height: 700px;
+  align-items: flex-end;
+  z-index: -1;
+}

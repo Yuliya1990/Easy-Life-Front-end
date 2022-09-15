@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../Logo/Logo.jsx';
 import styles from './Navibar.module.css';
+import { NavLink } from 'react-router-dom';
 function Navibar() {
   return (
     <Navbar
@@ -22,9 +23,15 @@ function Navibar() {
           }}></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className={styles.nav}>The App</Nav.Link>
-            <Nav.Link className={styles.nav}>About Us</Nav.Link>
-            <Nav.Link className={styles.nav}>Work with us</Nav.Link>
+            <Nav.Link className={styles.nav} as={NavLink} to="/">
+              The App
+            </Nav.Link>
+            <Nav.Link className={styles.nav} as={NavLink} to="/AboutUs">
+              About Us
+            </Nav.Link>
+            <Nav.Link className={styles.nav} as={NavLink} to="/WorkWithUs">
+              Work with us
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
