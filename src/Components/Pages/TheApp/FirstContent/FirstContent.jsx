@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import App from '../../../img/App.png';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 function FirstContent() {
   return (
@@ -27,9 +27,11 @@ function FirstContent() {
                 <mark style={{ backgroundColor: '#ffcc00' }}>your life easier!</mark>
               </li>
             </ul>
-            <button className={styles.btn}>
-              <b>Get started!</b>
-            </button>
+            <Link to="/LogIn">
+              <button className={styles.btn}>
+                <b>Get started!</b>
+              </button>
+            </Link>
           </div>
         </Col>
         <Col xs={12} lg={4} sm={6} className={styles.col}>

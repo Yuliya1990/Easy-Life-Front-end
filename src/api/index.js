@@ -4,6 +4,7 @@ export const BASE_URL = 'http://localhost:5055/';
 
 export const ENDPOINTS = {
   cleaningTypes: 'CleaningTypes',
+  cleaningComponents: 'CleaningComponents',
 };
 
 export const createAPIEndpoint = (endpoint) => {
