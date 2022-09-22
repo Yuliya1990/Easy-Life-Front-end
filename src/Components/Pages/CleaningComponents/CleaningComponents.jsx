@@ -51,26 +51,28 @@ export default function CleaningComponents() {
             What is included in the cleaning:
           </h2>
         </Row>
-        <Row>
-          {allComponents.map((component, index) => {
-            return (
-              <>
-                <Col xs={12} sm={6} lg={4} xl={3}>
-                  <ToggleButton
-                    className={styles.btn}
-                    type="checkbox"
-                    variant="outline-warning"
-                    id={index}
-                    key={index}
-                    value={index}
-                    checked={isActive(component)}>
-                    <h5>{component.name}</h5>
-                  </ToggleButton>
-                </Col>
-              </>
-            );
-          })}
-        </Row>
+
+        <ToggleButtonGroup type="checkbox">
+          <Row>
+            {allComponents.map((component, index) => {
+              return (
+                <>
+                  <Col xs={12} sm={6} lg={4} xl={3}>
+                    <ToggleButton
+                      className={styles.btn}
+                      variant="outline-warning"
+                      id={index}
+                      key={index}
+                      value={index}
+                      checked={isActive(component)}>
+                      <h5>{component.name}</h5>
+                    </ToggleButton>
+                  </Col>
+                </>
+              );
+            })}
+          </Row>
+        </ToggleButtonGroup>
       </Container>
     </>
   );
