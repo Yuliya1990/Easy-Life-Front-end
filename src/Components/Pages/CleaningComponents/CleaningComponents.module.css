@@ -1,5 +1,8 @@
 .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 250px;
-  height: 65px;
+  height: 80px;
   margin-bottom: 25px;
 }
