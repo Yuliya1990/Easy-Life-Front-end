@@ -27,7 +27,7 @@ function FirstContent() {
                 <mark style={{ backgroundColor: '#ffcc00' }}>your life easier!</mark>
               </li>
             </ul>
-            <Link to="/LogIn">
+            <Link to="/GetStarted">
               <button className={styles.btn}>
                 <b>Get started!</b>
               </button>

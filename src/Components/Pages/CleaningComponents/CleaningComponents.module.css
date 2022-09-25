@@ -2,7 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 250px;
-  height: 80px;
+  width: 220px;
+  height: 50px;
   margin-bottom: 25px;
+  border-radius: 20px;
+}
+
+.btnAccept {
+  width: 220px;
+  height: 50px;
+  margin-bottom: 25px;
+  border-radius: 20px;
 }

@@ -4,11 +4,13 @@ import styles from './CleaningComponents.module.css';
 import { useState, useEffect } from 'react';
 import { createAPIEndpoint, ENDPOINTS } from '../../../api/index';
 import { useParams } from 'react-router-dom';
-import { ToggleButton, ButtonGroup, Container, Row, Col, Badge } from 'react-bootstrap';
+import { ToggleButton, Button, Container, Row, Col, Badge } from 'react-bootstrap';
 
 export default function CleaningComponents() {
   const [components, setComponents] = useState([]);
   const [allComponents, setAllComponents] = useState([]);
+  const [addComponents, setAddComponent] = useState([]);
+
   const { cleaningTypeid } = useParams();
   const [checkedState, setCheckedState] = useState(new Array(100).fill(false));
 
@@ -30,16 +32,18 @@ export default function CleaningComponents() {
       .catch((err) => console.log(err));
   }, []);
 
-  function isActive(component) {
-    if (components.find((element) => element.name === component.name)) return true;
-    else return false;
+  function chooseNewComponent(component) {
+    const updatedAddComponents = addComponents.push(component);
+    setAddComponent(updatedAddComponents);
   }
 
-  const handleOnChange = (position) => {
+  const handleOnChange = (position, component) => {
     const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item,
     );
     setCheckedState(updatedCheckedState);
+
+    if (updatedCheckedState[position] === true) chooseNewComponent(component);
   };
 
   function isChecked(component, index) {
@@ -69,14 +73,24 @@ export default function CleaningComponents() {
                     value={component.name}
                     checked={isChecked(component, index)}
                     variant="outline-warning"
-                    onChange={() => handleOnChange(index)}>
-                    <h5 style={{ textAlign: 'start' }}>{component.name}</h5>
+                    onChange={() => handleOnChange(index, component)}>
+                    <h6 style={{ textAlign: 'start' }}>{component.name}</h6>
                     <Badge bg="dark"> {component.price}€</Badge>
                   </ToggleButton>
                 </Col>
               </>
             );
           })}
+        </Row>
+        <Row>
+          <Col xs={12} sm={6}>
+            <h4>Total:</h4>
+          </Col>
+          <Col xs={12} sm={6}>
+            <Button variant="dark" className={styles.btnAccept}>
+              <h4>Accept</h4>
+            </Button>
+          </Col>
         </Row>
       </Container>
     </>
