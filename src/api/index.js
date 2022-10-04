@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-export const BASE_URL = 'http://localhost:5055/';
+export const BASE_URL = 'http://localhost/';
+//export const BASE_URL = 'http://localhost:5055/';
+//export const BASE_URL = '/';
 
 export const ENDPOINTS = {
-  cleaningTypes: 'CleaningTypes',
-  cleaningComponents: 'CleaningComponents',
+  cleaningTypes: 'Cleanings',
+  cleaningComponents: 'Components',
 };
 
 export const createAPIEndpoint = (endpoint) => {

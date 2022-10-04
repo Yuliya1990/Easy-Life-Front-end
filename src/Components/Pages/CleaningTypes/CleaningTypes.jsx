@@ -43,12 +43,12 @@ export default function CleaningTypes() {
                     <>
                       <Button
                         as={Link}
-                        to={`/components/${cleaningType.cleaningTypeid}`}
+                        to={`/components/${cleaningType.cleaningid}`}
                         className={styles.Button}
                         variant="dark"
                         key={cleaningType.id}
                         onClick={() => {
-                          handleClick(cleaningType.cleaningTypeid);
+                          handleClick(cleaningType.cleaningid);
                         }}>
                         <h4>{cleaningType.name}</h4>
                       </Button>
